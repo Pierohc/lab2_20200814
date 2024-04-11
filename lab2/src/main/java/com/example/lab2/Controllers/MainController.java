@@ -31,17 +31,21 @@ public class MainController {
 
 
 
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> listCol = new ArrayList<>();
 
+        n = 1;
         while(n<=row){
-            list.add(n);
+            listCol.add(n);
             n = n+1;
         }
-        System.out.println(list.size());
+        System.out.println(listCol.size());
+
+
         model.addAttribute("row",row);
         model.addAttribute("col",col);
         model.addAttribute("posiciones", posiciones);
         model.addAttribute("fotos",photos);
+        model.addAttribute("listRow",listCol);
 
         return "tabla_patos";
     }
